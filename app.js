@@ -1,9 +1,10 @@
 const app = Vue.createApp({
   data() {
     return {
-      string: "Alfredo",
-      array: ["Alfredo loves Arantxa"],
+      string: "Hello",
+      beautiful: "Arantxa",
       number: 0,
+      toggle: true,
     };
   },
   methods: {
@@ -13,8 +14,8 @@ const app = Vue.createApp({
     decrease() {
       this.number--;
     },
-    changeString(name) {
-      this.string = name;
+    toggleSection() {
+      this.toggle = !this.toggle;
     },
   },
 });

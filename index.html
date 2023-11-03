@@ -11,11 +11,17 @@
   <body>
     <div class="app">
       <p>{{string}}</p>
-      <p>{{array}}</p>
-      <p>{{number}}</p>
-      <button @click="increase">Increase Number</button
-      ><button @click="decrease">Decrease Number</button
-      ><button @click="changeString('Sarai')">Edit String</button>
+      <p>{{beautiful}}</p>
+      <div v-if="toggle">
+        <p>{{number}}</p>
+      </div>
+      <div style="background-color: brown" v-show="toggle">Hello</div>
+      <button @click="increase">increase</button>
+      <button @click="decrease">decrease</button>
+      <button @click="toggleSection">
+        <span v-if="!toggle">show</span>
+        <span v-else="toggle">hide</span>
+      </button>
     </div>
   </body>
 </html>
